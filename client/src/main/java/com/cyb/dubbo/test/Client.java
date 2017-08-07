@@ -17,5 +17,11 @@ public class Client {
         System.out.println("==========================");
         DefService def = run.getBean(DefService.class);
         System.out.println(def.service.print("chenyb"));
+        
+        AbcService2 abc1 = run.getBean(AbcService2.class);
+        System.out.println(abc1.echoService.echo("abccc"));
+        System.out.println("==========================");
+        DefService2 def1 = run.getBean(DefService2.class);
+        System.out.println(def1.service.print("chenyb"));
     }
 }
