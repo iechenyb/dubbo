@@ -6,7 +6,7 @@ import com.cyb.dubbo.test.EchoService;
 import org.springframework.stereotype.Component;
 
 /**
- * @author xiaofei.wxf(teaey)
+ * @author iechenyb
  * @since 0.0.0
  */
 @Component

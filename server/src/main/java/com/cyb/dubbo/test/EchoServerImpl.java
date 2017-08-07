@@ -3,7 +3,7 @@ package com.cyb.dubbo.test;
 import com.alibaba.dubbo.config.annotation.Service;
 
 /**
- * @author xiaofei.wxf(teaey)
+ * @author iechenyb
  * @since 0.0.0
  */
 @Service(version = "1.0.0")
