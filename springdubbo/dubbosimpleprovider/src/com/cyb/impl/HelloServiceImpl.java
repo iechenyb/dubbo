@@ -2,7 +2,7 @@ package com.cyb.impl;
 
 import org.springframework.beans.factory.InitializingBean;
 
-import com.cyb.service.HelloService;
+import com.cyb.dubbo.test.HelloService;
 
 public class HelloServiceImpl implements HelloService,InitializingBean {
 	private int i = 0;

@@ -4,6 +4,6 @@
        xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
     <dubbo:application name="demo-consumer"/>
-    <dubbo:reference id="helloWorldService" interface="com.cyb.service.HelloService" version="1.0.0" check="false"/>
+    <dubbo:reference id="helloWorldService" interface="com.cyb.dubbo.test.HelloService" version="1.0.0" check="false"/>
     <dubbo:registry address="zookeeper://localhost:2181"/>
 </beans>
