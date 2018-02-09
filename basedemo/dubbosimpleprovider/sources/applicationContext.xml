@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+       http://www.springframework.org/schema/beans/spring-beans.xsd 
+       http://code.alibabatech.com/schema/dubbo 
+       http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+    <!-- http://blog.csdn.net/liwf_/article/details/39053601 -->
+    <dubbo:monitor protocol="registry" />
+    <dubbo:application name="demo-server"/>
+    <dubbo:registry address="zookeeper://localhost:2181"/>
+    <dubbo:protocol name="dubbo" port="20880"/>
+    <!-- mock="return null"|"true" -->
+    <dubbo:service interface="com.cyb.dubbo.test.HelloService" 
+    mock="true" ref="helloWorldService" version="1.0.0"
+     cluster="failfast" delay="-1" />
+    <bean id="helloWorldService" class="com.cyb.impl.HelloServiceImpl"/>
+</beans>
